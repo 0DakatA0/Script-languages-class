@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}~
 
 {% block content %}
     <h3>Details page</h3>
@@ -13,7 +14,7 @@
         <form method="post">
             {%csrf_token%}
             <h4></h4>
-            <h4>{{ post.text|linebreaksbr }}</h4>
+            <img src="{% static "meme.png" %}" alt="My image">
             <button class="btn btn-primary" href="/detail/{{ post.id }}" role="button">Delete</button>
         </form>
     </div>
